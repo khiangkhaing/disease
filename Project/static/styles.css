@@ -1,0 +1,54 @@
+body {
+    font-family: OpenSansRegular;
+    margin: 80px;
+    padding: 0;
+}
+h1 { font-size: 38px;
+    text-align: center;
+    margin-bottom: 30px; }
+
+.wk-slideshow-infinite .caption h1 + span { font-family: "MavenProRegular"; }
+
+
+.disease {
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.disease img {
+    width: 25%;
+    height: 40%;
+    padding-left: 10px;
+    float:right;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.disease h2 {
+    1color: #007bff;
+    margin-bottom: 15px;
+}
+.disease p {
+    margin-bottom: 15px;
+    1margin-left: 20px;
+    
+}
+1@media only screen and (min-width: 768px) {
+    .disease {
+        display: flex;
+        align-items: center;
+    }
+
+    .disease img {
+        margin-right: 20px;
+        flex: 0 0 auto;
+    }
+
+    .disease p {
+        margin-bottom: 0;
+    }
+}
+

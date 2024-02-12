@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rice Diseases</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/templates/yoo_infinite/fonts/mavenpro.css') }}" />
+    <link rel="stylesheet" href="/templates/yoo_infinite/fonts/mavenpro.css" />
+</head>
+<body>
+    <h1>Rice Diseases</h1>
+    {% for disease in diseases %}
+    <div class="disease">
+        <h2>{{ disease['name'] }}</h2>
+        <p>
+        <img src="{{ url_for('static', filename='images/' + disease['image']) }}" alt="{{ disease['name'] }} ">
+        {{ disease['description'] }}</p>
+        
+        <h2>What it does</h2>
+        <p>{{ disease['What it does'] }}<p>
+        
+        <h2>Why and where it occurs</h2>
+        <p>{{ disease['Why and where it occurs'] }}<p>
+        
+        <h2>How to identify</h2>
+        <p>{{ disease['How to identify'] }}<p>
+        
+        <h2>How to manage</h2>
+        <p>{{ disease['How to manage'] }}</p>
+        
+        <h2>Fungicide</h2>
+        <p>{{ disease['Fungicide'] }}</p>
+        
+    </div>
+    {% endfor %}
+</body>
+</html>
+
